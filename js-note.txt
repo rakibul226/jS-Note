@@ -1,0 +1,183 @@
+01.Object
+06.find value with index number
+07.sum all element of an array
+08.find EVEN number with array index
+09.find ODD number with array index
+10.new array of EVEN numbers
+11.new array of ODD numbers
+
+
+
+----------------------Object----------------------------
+	01.creating object
+	02.find a specific value by property name
+	03.show all the property of an Object(using keys)
+	04.show all the property of an Object (using values)
+	05.show property name with value
+	06.set new property value
+	07.find property name with value using for loop 
+	08.find property name with value using for in loop 	
+
+
+
+
+		01.creating object
+			var mobile = {
+				brand:"sumsung",
+				price:1200,
+				storage:"128 gb"   
+			}
+
+
+		02.find a specific value by property name
+
+			var brandName = mobile.brand
+			var mobilePrice = mobile.price
+			var mobileStorage = mobile.storage
+
+			var brandName = mobile['brand'];
+			var mobilePrice = mobile['price'];
+			var rom = mobile['storage'];
+
+			console.log(//variableName)
+
+
+
+		03.show all the property of an Object(using keys)
+
+			var properties = Object.keys(mobile);
+				// console.log(properties)
+
+
+
+		04.show all the property of an Object (using values)
+
+			var propertieValue = Object.values(mobile)
+				//console.log(propertieValue)
+
+
+
+		05.show property name with value
+			var propertyName = 'storage';
+			var pValue = mobile[propertyName];
+				//console.log(propertyName, pValue)
+
+
+		06.set new property value
+
+			mobile.brand='asus';
+
+			mobile['brand'] = ['apple'];
+
+			var propertyName = 'storage';
+			mobile[propertyName] = 64; 
+
+				//console.log(mobile)
+
+
+		07.find property name with value using for loop 
+
+			var properties = Object.keys(mobile);
+
+			for(var i = 0; i<properties.length; i++){
+				const pName = properties[i]; 
+				const pValue = mobile[pName];
+				console.log(pName,pValue )
+			}
+
+
+		08.find property name with value using for in loop 	
+
+		for(var propertyName in mobile){
+			const pValue = mobile[propertyName]
+			console.log(propertyName,pValue);
+		}
+
+
+
+06.---------find value with index number-----------
+
+	function valueOfIndex(numbers){
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i;
+			const element = numbers[index];
+			console.log(index,element)
+		}  
+	}
+	//valueOfIndex(//arrayName);
+
+
+07.---------sum all element of an array---------------
+
+	function getSumOfAnArray(numbers){
+		var sum = 0;
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i;
+			const element = numbers[index];
+			sum +=element;
+		}  
+		return sum;
+	}
+		
+	//  var sum = getSumOfAnArray(//arrayName);
+
+
+08.-------find even number inside an array with index number-------------
+
+	function getEvenNumbers(numbers){
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i; //for printing the index also
+			const element = numbers[index];
+			if(element % 2 === 0)
+			{
+				console.log(index,element)
+			}
+		}  
+	}
+	//getEvenNumbers(myNumbers);  //calling the function
+
+
+09.-------find odd number inside an array with index number-------------
+
+	function getOddNUmbers(numbers){
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i;
+			const element = numbers[index];
+			if(element % 2 !== 0){
+				console.log(index,element)
+			}       
+		}  
+	}
+	//getOddNUmbers(myNumbers);	//calling the function
+
+
+10.-------get all the Even number from array and create a new array -------------
+
+	function getArrayOfEvenNumber(numbers){
+		const evenNumbers = [];
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i;
+			const element = numbers[index];
+			if(element % 2 === 0){				
+				evenNumbers.push(element)
+			}
+		}  
+		return evenNumbers;
+	}
+	// const evenNumbers = getArrayOfEvenNumber(//arrayName);
+
+
+11.-------get all the odd number as a new array from an array-------------
+
+	function getArrayOfOddNumber(numbers){
+		const oddNumbers = [];
+		for(let i = 0; i<numbers.length;i++ ){
+			const index = i;
+			const element = numbers[index];
+			if(element % 2 !== 0){				
+				oddNumbers.push(element)
+			}
+		}  
+		return oddNumbers;
+	}
+	//const oddNumbers = getArrayOfOddNumber(//arrayName);
