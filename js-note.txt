@@ -5,10 +5,13 @@
 09.find ODD number with array index
 10.new array of EVEN numbers
 11.new array of ODD numbers
+12.factorial of n'th number using For loop
+13.factorial of n'th number in reverser order using For loop
 
 
 
-----------------------Object----------------------------
+-----------------------------Object-----------------------------
+
 	01.creating object
 	02.find a specific value by property name
 	03.show all the property of an Object(using keys)
@@ -93,6 +96,8 @@
 			console.log(propertyName,pValue);
 		}
 
+
+----------------------------/Object-----------------------------
 
 
 06.---------find value with index number-----------
@@ -181,3 +186,55 @@
 		return oddNumbers;
 	}
 	//const oddNumbers = getArrayOfOddNumber(//arrayName);
+
+
+12.factorial of n'th number using For Loop
+
+	function sumOfNumbers(number){
+		let sum = 1;
+		for(let i = 1; i<=number; i++){
+			sum = sum * i;
+			console.log(i,sum)
+		}
+		return sum;
+	}
+	var n = sumOfNumbers(9)
+	console.log(n)
+
+
+13.factorial of n'th number in reverser order for loop
+
+	function sumOfNumbers(number){
+		let sum = 1;
+		for(let i = number; i>0; i--){
+			sum = sum * i;
+			console.log(i,sum)
+		}
+		return sum;
+	}
+	var n = sumOfNumbers(9)
+	console.log(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
