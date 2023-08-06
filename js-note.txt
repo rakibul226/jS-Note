@@ -190,6 +190,7 @@
 	}
 	//const oddNumbers = getArrayOfOddNumber(//arrayName);
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 12.factorial of n'th number using For Loop
 
@@ -204,6 +205,7 @@
 	var n = factorial(9)
 	console.log(n)
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 13.factorial of n'th number in reverser order for loop
 
@@ -219,7 +221,7 @@
 	var n = factorial(9);
 	console.log("factorial of ",numb, n);
 
-
+----------------------------------------------------------------------------------------------------------------------------------
 
 14.factorial with while loop
 
@@ -235,6 +237,7 @@
 	var result = factorial(9);
 	console.log(result)
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 15.factorial with while loop reverse order
 
@@ -250,6 +253,7 @@
 	var result = factorial(9);
 	console.log(result)
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 16.get each characters from a sentence
 
@@ -264,6 +268,7 @@
 	const mySting = "my name is rakibul";
 	printSting(mySting)
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 17.get each characters from a sentence in  reverse 
 	function printSting(text){
@@ -276,6 +281,7 @@
 	const mySting = "my name is rakibul";
 	printSting(mySting)
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 18.get each characters from a sentence and print in reverse 
 	function printSting(text){
