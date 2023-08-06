@@ -7,8 +7,11 @@
 11.new array of ODD numbers
 12.factorial of n'th number using For loop
 13.factorial of n'th number in reverser order using For loop
-
-
+14.factorial with while loop
+15.factorial with while loop inn reverse
+16.get each characters from a sentence
+17.get each characters from a sentence in  reverse 
+18.get each characters from a sentence and print in reverse 
 
 -----------------------------Object-----------------------------
 
@@ -219,6 +222,7 @@
 
 
 14.factorial with while loop
+
 	function factorial(number){
 		let i = 1;
 		let result = 1
@@ -233,6 +237,7 @@
 
 
 15.factorial with while loop reverse order
+
 	function factorial(number){
 		let i = number;
 		let result = 1
@@ -246,10 +251,45 @@
 	console.log(result)
 
 
+16.get each characters from a sentence
+
+	function printSting(text){
+		
+		for(let i = 0; i <text.length; i++){
+			const element = text [i];
+			console.log(element);
+		}      
+	}
+
+	const mySting = "my name is rakibul";
+	printSting(mySting)
 
 
+17.get each characters from a sentence in  reverse 
+	function printSting(text){
+		
+		for(let i = text.length - 1; i >= 0; i--){
+			const element = text [i];
+			console.log(element);
+		}      
+	}
+	const mySting = "my name is rakibul";
+	printSting(mySting)
 
 
+18.get each characters from a sentence and print in reverse 
+	function printSting(text){
+		
+		let reverseText ='';
+		for(let i = text.length - 1; i >= 0; i--){
+			const element = text [i];
+			reverseText = reverseText+element;
+		}      
+		return reverseText;
+	}
+	const mySting = "lubikar si eman ym";
+	let newReverseText = printSting(mySting);
+	console.log(newReverseText);
 
 
 
