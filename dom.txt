@@ -1,0 +1,53 @@
+01.Get all element by tag name
+ 02. get specific Element by id
+ 03. get element with the same class
+ 04. select first element with css selector
+ 05. select all element with css selector
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+    01.Get all element by tag name
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const h1 of allHeadings){
+            console.log(h1);
+            console.log(h1.innerText);
+        }
+
+----------------------------------------------------------------------------------------------------------------------------------
+            
+    02. get specific Element by id
+
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'fruits changed by js';
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+    03. get element with the same class
+
+        const places = document.getElementsByClassName('important-fruits')
+        for(const place of places){
+            console.log(place);
+            console.log(place.innerText);
+        }
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+    04. select first element with css selector
+
+        const myli = document.querySelector('.fruits-container li')
+         console.log(myli)
+         console.log(myli.innerText)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+    05. select all element with css selector
+
+        const someli = document.querySelectorAll('.fruits-container li');
+        for(const li of someli){
+            console.log(li.innerText);
+        }
+
+----------------------------------------------------------------------------------------------------------------------------------
