@@ -12,6 +12,9 @@
 16.get each characters from a sentence
 17.get each characters from a sentence in  reverse 
 18.get each characters from a sentence and print in reverse 
+19.get each item of a array using for of loop
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------Object-----------------------------
 
@@ -25,7 +28,7 @@
 	08.find property name with value using for in loop 	
 
 
-
+----------------------------------------------------------------------------------------------------------------------------------
 
 		01.creating object
 			var mobile = {
@@ -99,9 +102,11 @@
 			console.log(propertyName,pValue);
 		}
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 ----------------------------/Object-----------------------------
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 06.---------find value with index number-----------
 
@@ -114,6 +119,7 @@
 	}
 	//valueOfIndex(//arrayName);
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 07.---------sum all element of an array---------------
 
@@ -129,6 +135,7 @@
 		
 	//  var sum = getSumOfAnArray(//arrayName);
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 08.-------find even number inside an array with index number-------------
 
@@ -144,6 +151,7 @@
 	}
 	//getEvenNumbers(myNumbers);  //calling the function
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 09.-------find odd number inside an array with index number-------------
 
@@ -158,6 +166,7 @@
 	}
 	//getOddNUmbers(myNumbers);	//calling the function
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 10.-------get all the Even number from array and create a new array -------------
 
@@ -174,6 +183,7 @@
 	}
 	// const evenNumbers = getArrayOfEvenNumber(//arrayName);
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 11.-------get all the odd number as a new array from an array-------------
 
@@ -271,6 +281,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 17.get each characters from a sentence in  reverse 
+
 	function printSting(text){
 		
 		for(let i = text.length - 1; i >= 0; i--){
@@ -284,6 +295,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 18.get each characters from a sentence and print in reverse 
+
 	function printSting(text){
 		
 		let reverseText ='';
@@ -297,9 +309,29 @@
 	let newReverseText = printSting(mySting);
 	console.log(newReverseText);
 
+----------------------------------------------------------------------------------------------------------------------------------
+
+19.get each item of a array using for of loop
+
+	let items = [1,2,3,4,5];
+	for(const item of items){
+		console.log(item);
+	}
 
 
+20.find the matching product by searching product
 
+	function matchProducts (products, search){
+		const matched = [];
+		for(const product of products){
+			if(product.name.toLowerCase().includes(search.toLowerCase())){
+				matched.push(product);
+			}
+		}
+	}
+
+	const result = matchProducts(product,'laptop')
+	console.log(result);
 
 
 
