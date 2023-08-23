@@ -1,9 +1,9 @@
-01.Get all element by tag name
+ 01.Get all element by tag name
  02. get specific Element by id
  03. get element with the same class
  04. select first element with css selector
  05. select all element with css selector
-
+ 06.Event onClick
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -49,5 +49,37 @@
         for(const li of someli){
             console.log(li.innerText);
         }
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+    06. event handeling
+
+    //way 1
+    <button onclick="document.body.style.backgroundColor='red'">Red</button>
+
+    //way 2
+    <button onclick="makeYellow()">yellow</button>
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow'
+        }
+
+    //way 3
+    <button id="make-blue"> Blue</button>
+        const makeBlueBtn = document.getElementById('make-blue');
+        makeBlueBtn.onclick = makeBlue;
+    
+      function makeBlue(){
+            document.body.style.backgroundColor = 'blue';
+        }
+
+
+
+    //way 3 in another style
+    <button id="make-purple">purple</button>
+         const makePurpleBtn = document.getElementById('make-purple');
+          makePurpleBtn.onclick = function makePurple(){
+            document.body.style.backgroundColor = 'purple'
+        }
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
