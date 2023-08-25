@@ -4,6 +4,7 @@
  04. select first element with css selector
  05. select all element with css selector
  06.Event onClick
+ 07.change innerText
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -90,6 +91,8 @@
             ----------------------------------------------------------------------------------------------------------------------
 
                 //option 4
+                <button id="make-pink">pink</button>
+                
                 const pinkButton = document.getElementById('make-pink');
                 pinkButton.addEventListener('click',makePink);
 
@@ -99,6 +102,8 @@
 
                 ------------------------------------------------------------------------------------
                 //option 4 another
+                <button id="make-green">green</button>
+
                 const makeGreenBtn = document.getElementById('make-green');
                 makeGreenBtn.addEventListener('click',function makeGreen(){
                     document.body.style.backgroundColor = 'green';
@@ -107,17 +112,52 @@
                 -------------------------------------------------------------------------------------
 
                 //optiton 4 FInal
+                <button id="make-golden">Golden</button>
+
                 document.getElementById('make-golden').addEventListener('click',function(){
                     document.body.style.backgroundColor = 'goldenrod';
                 })
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+    07.Change innerText
+                option-1
 
+                <h2 id="handler-status">default text</h2>
+                <button onclick="handleClick()">onClick</button>
 
+                function handleClick(){
+                    const handlerStatus = document.getElementById('handler-status');
+                    handlerStatus.innerText = 'Handle by function attached on onclick event';
+                }
 
+                -------------------------------------------------------------------------------------
+                option-2
 
+                <h2 id="handler-status">default text</h2>
+                <button id="event-listener">update</button>
 
+                 document.getElementById('event-listener').addEventListener('click', function(){
+                const handlerStatus = document.getElementById('handler-status');
+                handlerStatus.innerText = 'Text Updated by add evenet lisenen'
+                })
+
+                -------------------------------------------------------------------------------------
+                option-2 recap
+
+                <input id="input-field" type="text">
+            	<button id="btn-update">Update</button>
+
+                document.getElementById('btn-update').addEventListener('click',function(){
+                const inputField = document.getElementById('input-field');
+                const inputText = inputField.value;
+
+                const cngeTxt = document.getElementById('handler-status');
+                cngeTxt.innerText = inputText;
+                inputField.value = '';
+                })
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 
 
