@@ -5,6 +5,9 @@
  05. select all element with css selector
  06.Event onClick
  07.change innerText
+ 08.get and post value  from input Field
+ 09.delet || hide || remove text on button click
+ 10.delet with validation
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -159,13 +162,72 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
+     08.get and post value  from input Field
+
+                <div  id="comment-container">
+                    //this div will contain the posted container
+                </div>
+                <div>
+                    <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+                    <button id="btn-post">post</button>
+                </div>
+                
+
+                document.getElementById('btn-post').addEventListener('click',function(){
+                const commentBox = document.getElementById('new-comment');
+                const newComment = commentBox.value;
+            
+                //getting the comment container
+                const commentContainer = document.getElementById('comment-container');
+                //creating new element
+                const p = document.createElement('p');
+                //set the text from input field as innertext of p
+                p.innerText = newComment;
+                //adding p tag using appendChild
+                commentContainer.appendChild(p);
+
+                commentBox.value = '';
+                
+                })
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 
+    09.delet || hide || remove text on button click
 
+        <h1 id="secret-info">My secret info</h1>
+        <button id="btn-delete" disabled>delete</button>
 
+        document.getElementById('btn-delete').addEventListener('click', function(){
+                const secret = document.getElementById('secret-info');
+                secret.style.display = 'none';
+            })
 
+----------------------------------------------------------------------------------------------------------------------------------
+  
+    10.delete with validation
 
+        <h1 id="secret-info">My secret info</h1>
+        <input type="text" name="" id="delete-confirm" placeholder="Type CONFIRM to delete">
+        <button id="btn-delete" disabled>delete</button>
 
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+                const text = event.target.value;
+                const deleteButton = document.getElementById('btn-delete');
+                if(text ==='CONFIRM'){
+                    deleteButton.removeAttribute('disabled');
+                }
+                else{
+                    deleteButton.setAttribute('disabled',true);
+                }
+            })
+ 
+        document.getElementById('btn-delete').addEventListener('click', function(){
+                const secret = document.getElementById('secret-info');
+                secret.style.display = 'none';
+            })
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 
 
