@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .post{
+            background-color: skyblue;
+            margin: 10px;
+            padding: 2px 15px;
+            color: black;
+        }
+        .comments{
+            background-color: rebeccapurple;
+            margin: 10px;
+            padding: 2px 15px;
+            color: aliceblue;
+        }
+        .Photos{
+            background-color: rgb(137, 144, 147);
+            margin: 10px;
+            padding: 2px 15px;
+            color: black;
+        }
+        .btn{
+            background-color: orangered;
+            color: white;
+            margin: 5px;
+            padding: 6px 18px;
+            border: none;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    
+<button onclick="loadData()" class="btn">User</button>
+<button onclick="loadPosts()" class="btn">Post</button>
+<button onclick="loadComments()" class="btn">Comments</button>
+<button onclick="loadPhotos()" class="btn">Photos</button>
+
+<div>
+    <ul id="user-list">
+
+    </ul>
+</div>
+
+<div>
+    <h1>All post are here</h1>
+    <div id="posts-container">
+    </div>
+
+    <h1>All Comments are here</h1>
+    <div id="comments-container">
+
+    </div>
+
+    <h1>All My Photos</h1>
+    <div id="photo-container">
+
+        <img src="" alt="">
+
+    </div>
+</div>
+
+<script src="user.js"></script>
+<script src="posts.js"></script>
+<script src="comments.js"></script>
+<script src="photos.js"></script>
+</body>
+</html>
